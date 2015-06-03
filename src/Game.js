@@ -36,7 +36,7 @@ function Game() {
 
   Game.prototype.versus = function() {
     if (((this.playerChoice === 'rock' && this.computerChoice === 'scissors'))
-     ||((this.playerChoice === 'scissors' && this.computerChoice === 'paper')) || ((this.playerChoice === 'paper' && this.computerChoice === 'rock'))) {
+     || ((this.playerChoice === 'scissors' && this.computerChoice === 'paper')) || ((this.playerChoice === 'paper' && this.computerChoice === 'rock'))) {
         this.message = 'Player wins!'
     } else if (this.playerChoice === this.computerChoice) {
       this.message = 'It is a DRAW!'

@@ -1,6 +1,10 @@
 describe ('Game', function(){
 
-  var game = new Game();
+  var game;
+
+  beforeEach(function() {
+    game = new Game();
+  });
 
   it('lets player choose rock', function() {
     game.chooseRock();
@@ -17,57 +21,64 @@ describe ('Game', function(){
     expect(game.playerChoice).toEqual('paper');
   });
 
-  it('game can randomly make a choice of of Rock, Paper or Scissors', function (){
-    game.randomNumber = 1;
-    game.computerRandomChoice(game.randomNumber);
+  it('game can randomly make a choice of Rock, Paper or Scissors', function (){
+    game.randomNumber = 0.15;
+    game.computerRandomChoice();
     expect(game.computerChoice).toEqual('rock');
   });
 
   it('knows that when player chooses rock and computer chooses scissors, player wins', function() {
     game.chooseRock();
-    game.computerRandomChoice(2);
+    game.randomNumber = 0.6;
+    game.computerRandomChoice();
     game.versus();
     expect(game.message).toEqual('Player wins!');
   });
 
   it('knows that when player chooses scissors and computer chooses paper, player wins', function() {
     game.chooseScissors();
-    game.computerRandomChoice(3);
+    game.randomNumber = 0.9;
+    game.computerRandomChoice();
     game.versus();
     expect(game.message).toEqual('Player wins!');
   });
 
   it('knows that when player chooses paper and computer chooses rock, player wins', function() {
     game.choosePaper();
-    game.computerRandomChoice(1);
+    game.randomNumber = 0.15;
+    game.computerRandomChoice();
     game.versus();
     expect(game.message).toEqual('Player wins!');
   });
 
   it('knows that when player chooses rock and computer chooses paper, computer wins', function() {
     game.chooseRock();
-    game.computerRandomChoice(3);
+    game.randomNumber = 0.9;
+    game.computerRandomChoice();
     game.versus();
     expect(game.message).toEqual('Computer wins!');
   });
 
   it('knows that when player chooses scissors and computer chooses rock, computer wins', function() {
     game.chooseScissors();
-    game.computerRandomChoice(1);
+    game.randomNumber = 0.15;
+    game.computerRandomChoice();
     game.versus();
     expect(game.message).toEqual('Computer wins!');
   });
 
   it('knows that when player chooses paper and computer chooses scissors, computer wins', function() {
     game.choosePaper();
-    game.computerRandomChoice(2);
+    game.randomNumber = 0.6;
+    game.computerRandomChoice();
     game.versus();
     expect(game.message).toEqual('Computer wins!');
   });
 
   it('knows that when player chooses scissors and computer chooses scissors, computer wins', function() {
     game.chooseScissors();
-    game.computerRandomChoice(2);
+    game.randomNumber = 0.6;
+    game.computerRandomChoice();
     game.versus();
     expect(game.message).toEqual('It is a DRAW!');
   });

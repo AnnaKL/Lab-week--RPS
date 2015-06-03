@@ -1,90 +1,34 @@
 <!DOCTYPE html>
 <html>
-  <title> ROCK, PAPER SCISSORS BATTLE</title>
+  <title>ROCK, PAPER SCISSORS BATTLE</title>
   <head>
-   <script src="src/Game.js"></script>
-   <script src="src/app.js"></script>
+    <link href='public/style.css' rel='stylesheet' media="screen" type='text/css'> <!--CSS Stylesheet-->
+    <link href='http://fonts.googleapis.com/css?family=Amatic+SC' rel='stylesheet' type='text/css'>  <!-- Google fonts -->
+    <script src="src/Game.js"></script> <!--Javascript Game Engine-->
+    <script src="src/app.js"></script> <!--Javascript Page Helpers-->
   </head>
 
   <body>
     <h1>Rock, Paper or Scissors...</h1>
     <h2>YOU DECIDE</h2>
 
-    <input id='rock' type="button" value="Rock" onclick='playerChoosesRock()'>
-    <input id='paper' type="button" value="Paper" onclick='playerChoosesPaper()'>
-    <input id='scissors' type="button" value="Scissors" onclick='playerChoosesScissors()'>
+    <button class='imagebutton' id='rock' type="submit" value="Rock" onclick='playerChoosesRock()'><img src="http://wdl.tmimgcdn.com/img_articles/15779/geci_rock-stone_01.jpg"></button>
+
+    <button class='imagebutton' id='paper' type="submit" value="Paper" onclick='playerChoosesPaper()'><img src="http://www.learnersdictionary.com/media/ld/images/legacy_print_images/scissors.gif"></button>
+    
+    <button class='imagebutton' id='scissors' type="submit" value="Scissors" onclick='playerChoosesScissors()'><img src="http://i.istockimg.com/file_thumbview_approve/39951732/3/stock-illustration-39951732-stack-of-papers.jpg"></button>
 
     <br><br>
 
-    <input id='play' type='button' value='Play' onclick='winnerIsDecided()'>
+    <input class='clickonbutton' id='play' type='button' value='Play' onclick='winnerIsDecided()'>
+    
     <br><br>
-    <div> <span id='whatsGoingOn'> What ya choosing? </span> </div>
+    
+    <div class="result" id='whatsGoingOn'>What have you chosen?</div>
 
-    <br><br>
-    <input id='reset' type='button' value='Play Again' onClick='window.location.reload()'>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <br>
+    
+    <input class='clickonbutton' id='reset' type='button' value='Play Again' onClick='window.location.reload()'>
 
   </body>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </html>
