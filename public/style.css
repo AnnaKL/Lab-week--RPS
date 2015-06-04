@@ -16,6 +16,10 @@ h2 {
 	font-size: 50px;
 }
 
+img {
+	height: 100px;
+}
+
 .imagebutton {
 	border-style: none;
 	background-color: white;
@@ -31,8 +35,4 @@ h2 {
 
 .result {
 	font-size: 20px;
-}
-
-img {
-	height: 100px;
 }

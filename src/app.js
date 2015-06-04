@@ -5,7 +5,7 @@ tellUs = function() {
 };
 
 decision = function () {
-  document.getElementById('whatsGoingOn').innerHTML = play.message;
+  document.getElementById('whatsGoingOn').innerHTML = "Computer chose " + play.computerChoice + "! " + play.message;
 };
 
 playerChoosesRock = function(){
